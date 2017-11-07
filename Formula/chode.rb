@@ -1,9 +1,14 @@
 class Chode < Formula
     desc "Node.js on ChakraCore :sparkles::turtle::rocket::sparkles:"
     homepage ""
-    url "https://github.com/nodejs/node-chakracore/archive/node-chakracore-v8.6.0.tar.gz" #"https://github.com/nodejs/node-chakracore/releases/download/node-chakracore-v8.6.0/node-v8.6.0-darwin-x64.tar.xz"
+    url "https://github.com/nodejs/node-chakracore/archive/node-chakracore-v8.6.0.tar.gz"
     sha256 "41affaba1970b2b1b1f7e2d266306e4e6c07bb4237e70dce35c7e8bce67c3e47"
     head "https://github.com/nodejs/node-chakracore.git"
+    
+    bottle do
+      root_url "https://github.com/NateLehman/homebrew-badideas/releases/download/v0.1.0/"
+      sha256 "0d00d9520dbd5e84f7d220cd19ba31776c8cc6e5eff47bfd98b2e3328530365b" => :high_sierra
+    end
   
     option "with-debug", "Build with debugger hooks"
     option "with-openssl", "Build against Homebrew's OpenSSL instead of the bundled OpenSSL"
