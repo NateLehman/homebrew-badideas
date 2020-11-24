@@ -13,7 +13,7 @@ class Laserboy < Formula
 
   def install
     Dir.chdir("src")
-    system "sed", "'304,313d'", "LaserBoy_macros.hpp"
+    system "sed", "304,313d", "LaserBoy_macros.hpp"
     system "make", "-f", "Makefile.osx"
     Dir.chdir("..")
     prefix.install "LaserBoy", 
